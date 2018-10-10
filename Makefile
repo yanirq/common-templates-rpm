@@ -8,9 +8,9 @@ RPM_VERSION     := $(shell echo ${VERSION} | cut -f 1 -d -)
 SPEC_RELEASE    := 1
 
 ## Capture manual edits by gathering variables from kubevirt-common-templates.spec ##
-SPEC_FILE_RELEASE      = $(shell spectool -S kubevirt-common-templates.spec | awk '{ print $2 }' | cut -f '3' -d '-' | cut -f '1' -d '.')
-SPEC_FILE_BUILDHASH    = $(shell spectool -S kubevirt-common-templates.spec | awk '{ print $2 }' | cut -f '3' -d '-' | cut -f '2' -d '.')
-SPEC_FILE_VERSION      = $(shell spectool -S kubevirt-common-templates.spec | awk '{ print $2 }' | cut -f '2' -d '-')
+SPEC_FILE_RELEASE      = $(shell spectool -S kubevirt-common-templates.spec | awk '{ print $2 }' | cut -f '5' -d '-' | cut -f '1' -d '.')
+SPEC_FILE_BUILDHASH    = $(shell spectool -S kubevirt-common-templates.spec | awk '{ print $2 }' | cut -f '5' -d '-' | cut -f '2' -d '.')
+SPEC_FILE_VERSION      = $(shell spectool -S kubevirt-common-templates.spec | awk '{ print $2 }' | cut -f '4' -d '-')
 
 
 release: spec tarball

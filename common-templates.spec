@@ -8,7 +8,7 @@
 
 Name:		common-templates
 Version:	0.2.0
-Release:	%{spec_release}.%{build_hash}
+Release:	%{spec_release}.%{build_hash}.1
 Summary:	%{name} - Common Templates
 		
 License:	ASL 2.0
@@ -37,4 +37,7 @@ cp -v common-templates.yaml %{buildroot}%{_datadir}/%{name}/manifests/
 
 
 %changelog
+* Sun Oct 14 2018 Yanir Quinn <yquinn@redhat.com> - 0.2.0-1.2a5036a.1
+- kubevirt common templates rpm testing
+
 
